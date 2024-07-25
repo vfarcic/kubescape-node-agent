@@ -3,7 +3,10 @@
   "packages": [
     "kind@0.23.0",
     "kubectl@1.30.2",
-    "kubernetes-helm@3.15.2"
+    "kubernetes-helm@3.15.2",
+    "path:gcloud#google-cloud-sdk",
+    "hey@0.1.4",
+    "yq-go@4.44.2"
   ],
   "shell": {
     "init_hook": [],

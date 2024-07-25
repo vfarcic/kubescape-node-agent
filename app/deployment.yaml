@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -40,50 +41,3 @@ spec:
           requests:
             cpu: 250m
             memory: 256Mi
----
-apiVersion: v1
-kind: Service
-metadata:
-  annotations:
-    description: This is a silly demo
-    language: Go
-    owner: Viktor Farcic (viktor@farcic.com)
-    team: dot
-  labels:
-    app.kubernetes.io/name: silly-demo
-  name: silly-demo
-spec:
-  ports:
-  - name: http
-    port: 8080
-    protocol: TCP
-    targetPort: 8080
-  selector:
-    app.kubernetes.io/name: silly-demo
-  type: ClusterIP
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  annotations:
-    description: This is a silly demo
-    language: Go
-    owner: Viktor Farcic (viktor@farcic.com)
-    team: dot
-  labels:
-    app.kubernetes.io/name: silly-demo
-  name: silly-demo
-spec:
-  ingressClassName: traefik
-  rules:
-  - host: sillydemo.127.0.0.1.nip.io
-    http:
-      paths:
-      - backend:
-          service:
-            name: silly-demo
-            port:
-              number: 8080
-        path: /
-        pathType: ImplementationSpecific
----
