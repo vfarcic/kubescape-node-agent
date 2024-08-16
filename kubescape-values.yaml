@@ -1,0 +1,10 @@
+clusterName: dot
+alertCRD:
+  installDefault: true
+capabilities:
+  runtimeDetection: enable
+nodeAgent:
+  config:
+    maxLearningPeriod: "5m"
+    stdoutExporter: true
+    alertManagerExporterUrls: prometheus-kube-prometheus-alertmanager.monitoring:9093

@@ -1,14 +1,14 @@
 alertmanager:
+  enabled: true
   ingress:
     enabled: true
     hosts:
-      - alertmanager.104.196.22.195.nip.io
-    ingressClassName: traefik
+      - alertmanager.52.86.221.235.nip.io
 grafana:
   enabled: false
-prometheus:
-  enabled: false
 kubeStateMetrics:
+  enabled: false
+prometheus:
   enabled: false
 nodeExporter:
   enabled: false
