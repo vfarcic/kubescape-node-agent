@@ -3,7 +3,7 @@ alertmanager:
   ingress:
     enabled: true
     hosts:
-      - alertmanager.k.root-servers.net..nip.io
+      - alertmanager.54.209.84.108.nip.io
 grafana:
   enabled: false
 kubeStateMetrics:
